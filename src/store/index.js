@@ -4,7 +4,6 @@ import * as actions from './actions'
 import * as getters from './getters'
 import website from './modules/website'
 import login from './modules/login'
-import department from './modules/sys/department'
 
 Vue.use(Vuex)
 
@@ -14,5 +13,5 @@ export default new Vuex.Store({
   modules: {
     website,
     login
-  },
+  }
 })

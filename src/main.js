@@ -20,29 +20,29 @@ Vue.use(VueBlu)
 
 // 路由初始化 history模式
 var router = new VueRouter({
-        routes: routers
-    })
+  routes: routers
+})
     // 路由启用
 const app = new Vue({
-    router,
-    store,
-    //监听路由检查登录
-    watch:{
-        "$route" : 'checkLogin'
-    },
-    created() {
-        this.checkLogin();
-    },
-    methods:{
-        checkLogin(){
-            //检查是否存在userName
-            if(!this.getcookie('userName')){
-                //如果没有登录状态则跳转到登录页
-                this.$router.push('/');
-            }
-        }
-    },
-    render: h => h(App)
+  router,
+  store,
+    // 监听路由检查登录
+  watch: {
+    '$route': 'checkLogin'
+  },
+  created () {
+    this.checkLogin()
+  },
+  methods: {
+    checkLogin () {
+    // 检查是否存在userName
+      if (!this.getcookie('userName')) {
+        // 如果没有登录状态则跳转到登录页
+        this.$router.push('/')
+      }
+    }
+  },
+  render: h => h(App)
 }).$mount('#app')
 
 export default app

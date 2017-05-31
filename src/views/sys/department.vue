@@ -44,7 +44,7 @@
         }
       ]
     }
-  ];
+  ]
   import { mapGetters } from 'vuex'
   export default {
     name: 'department',
@@ -54,8 +54,8 @@
         treeModel: myData
       }
     },
-    create() {
-      this.getTreeData();
+    create () {
+      this.getTreeData()
     },
     computed: mapGetters({
       // todo  treeData改为上文中的treeModel，即为部门树的数据源
@@ -63,7 +63,7 @@
     }),
     methods: {
       // 加载部门树
-      getTreeData() {
+      getTreeData () {
         this.$store.dispatch('getDepartmentTree')
       }
     }
